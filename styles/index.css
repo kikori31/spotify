@@ -1,0 +1,14 @@
+/* index.css */
+header {
+    background-color: #111;
+    height:80px;
+    display:flex; flex-flow:row nowrap; /* 헤더의 자식들 메인축 수평 줄바꿈x */
+    justify-content:space-between; /* 간격은 자동으로 */
+    align-items:center;/* 교차축수직 정렬:가운데 */
+    padding:0 20px; /* 좌우 패딩 값 */
+}
+header * {color:#fff;}
+header h1 {width:32px;} /*  */
+header h1 a img {width:100%;} /* 부모의 크기를 따라가게 설정 */
+header form {display:flex; flex-flow:row nowrap;}
+header .snb {display:flex; flex-flow:row nowrap; gap:20px;}

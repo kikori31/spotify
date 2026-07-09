@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>SIGN UP | Spotify </title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/join.css">
+    <script src="./scripts/join.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <main>
+            <h1><a href="./index.html"><img src="./images/favicon2.png" alt="Spotify"></a></h1>
+            <div class="tab_menu">
+                <a href="./login.html" class="sign_in">SIGN IN</a>
+                <a href="./join.html" class="active sign_up">SIGN UP</a>
+            </div>
+            <form action="#" method="post" name="join_frm"><!-- form:post -->
+                <fieldset class="email_join"><!-- fieldset*2>legend -->
+                    <legend>이메일 주소 직접 입력가입</legend>
+                    <h2>이메일주소</h2>
+                    <!-- p 묶은 이유? input이 인라인이라 블록하고 형제가 될 수 없기 때문 -->
+                    <!-- type=email, type=text 모두 맞음. 좀 더 의미적으로 연관된 대상선택을 권장함. -->
+                    <!-- autofocus 속성은 html 한 페이지당 딱 한번만 사용하기 -->
+                    <p><input type="email" name="user_email" id="user_email" placeholder="name@domain.com" autofocus></p>
+                    <p><button type="button" id="email_next_btn">다음</button></p>
+                </fieldset>
+                <fieldset class="or_join">
+                    <legend>구글,애플계정으로 가입하기</legend>
+                    <p>또는</p>
+                    <a href="https://google.com" class="google">Google로 가입하기</a>
+                    <!-- p+a 될수 있는 이유? a는 HTML에선 블록으로 처리 가능, CSS에선 인라인취급 -->
+                    <!-- 외부 엄체는 절대경로 https://로 연결하기 -->
+                    <a href="https://apple.com/login" class="apple">Apple로 가입하기</a>
+                </fieldset>
+            </form>
+            <!-- 아래 p, a는 왜 form태그 밖인가? 서버 전송 목적이 아닌 단순 이동링크이기 때문 -->
+            <p>이미 계정이 있나요?</p>
+            <a href="./login.html" class="login_link">로그인</a>
+        </main>
+    </div>
+</body>
+</html>
