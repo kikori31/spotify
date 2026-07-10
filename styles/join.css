@@ -7,6 +7,9 @@ body{background-color: #222;}
     padding-top:100px;
 }
 #wrap main {}
+#wrap main * {
+    color:#fff;
+}
 #wrap main h1 {
     width:150px;
     margin:0 auto;
@@ -22,7 +25,60 @@ body{background-color: #222;}
 #wrap main .tab_menu .sign_in {}
 #wrap main .tab_menu .sign_up {}
 #wrap main .tab_menu .active {
-    border-bottom:2px solid #1ED760;
-    padding-bottom: 6px;
+    /* border-bottom:2px solid #1ED760;
+    padding-bottom: 6px; */
+    position:relative;
+}
+#wrap main .tab_menu .active::after {
+    content:''; display:block;
+    /* background-color:#1ED760 ; */
+    background:linear-gradient(90deg,yellow, #1ed760,transparent);
+    width:60px; height:3px;
+    position: absolute; left:0; bottom:-10px;
+}
+#wrap main .tab_menu .active::before{
+    content:''; display:block;
+    background-color: rgba(255,233,41,0.7);
+    width:60px; height:8px;
+    position:absolute; left:0; bottom:0; z-index:-1;
 }
 #wrap main .tab_menu * {color:#fff;}
+/* -------------------------------가입 양식 */
+#wrap main form[name*=join] {
+    /* background-color: purple; */
+}
+#wrap main form[name*=join].email_join {
+    color:#fff;
+}
+#wrap main form[name*=join] .email_join p  {
+}
+#wrap main form[name*=join] .email_join p #user_email {
+    width:420px; height:42px;
+    margin-bottom:17px;
+}
+#wrap main form[name*=join] fieldset[class*=email] p #email_next_btn {
+    width:100%; height:42px;
+    background-color: #1ed760;
+    border-radius:23px;
+
+}
+/* -------------------------------구글,애플로 가입하기 */
+#wrap main form[name*=join] .or_join .google {
+    background-image: url(../images/google.svg);
+}
+#wrap main form[name*=join] .or_join .apple {
+    background-image: url(../images/apple.svg);
+}
+#wrap main form[name*=join] .or_join a {
+    background-repeat: no-repeat;
+    border:1px solid #fff; color:#fff;
+    border-radius: 23px;
+    display:block; line-height:42px;
+    text-align:center;
+    background-position:15px center;
+    margin-bottom:12px;
+}
+#wrap main p {
+}
+#wrap main .login_link {
+}
